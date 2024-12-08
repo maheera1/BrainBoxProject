@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Summary Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Group Summary Report</h1>
+  <p>Generated on: {{date}}</p>
+  <table>
+    <tr>
+      <th>Group Name</th>
+      <th>Subject</th>
+      <th>Created By</th>
+      <th>Members</th>
+      <th>Messages</th>
+    </tr>
+    {{#each groups}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.subject}}</td>
+      <td>{{this.creator}}</td>
+      <td>{{this.members}}</td>
+      <td>{{this.messages}}</td>
+    </tr>
+    {{/each}}
+  </table>
+</body>
+</html>
